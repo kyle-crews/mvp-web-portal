@@ -1,11 +1,12 @@
-# if static files are needed, add the "load static" block as done in base.html 
+<!-- if static files are needed, add the 'load static' block -->
 
 {% extends 'base.html' %}
+{% load humanize %}
 {% block title %}
-    Homepage - {{ block.super }} # loads the title block from the base.html file
+    Homepage - {{ block.super }} <!-- loads the title block from the base.html file -->
 {% endblock title %}
 
 {% block content %} 
         <h1>Hello World!</h1>
-        <p>I am a basic website.</p>
+        <p>There are {{ number|apnumber }} dog{{ number|pluralize }}!</p>
 {%  endblock content %}
