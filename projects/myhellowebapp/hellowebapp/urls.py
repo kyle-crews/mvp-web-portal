@@ -21,7 +21,7 @@ from collection import views
 urlpatterns = [
     path('', views.index, name='home'),
     path('about/',
-        TemplateView.as_view(template_name='about.html'),
+        TemplateView.as_view(template_name='about.html'), # when only using simple HTML/CSS, django's generic view can be used.
         name='about'),
     path('contact/',
         TemplateView.as_view(template_name='contact.html'),

@@ -2,9 +2,7 @@
 
 {% load static %}
 <!doctype html>
-
 <html>
-
 <head>
     <title>
         {% block title %}
@@ -16,6 +14,16 @@
 </head>
 
 <body>
+    <header>
+        <h1>Hello World Web App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>        
+        </nav>
+    </header>
     {% block content %}{% endblock content %}
     {% block footer %}{% endblock footer %}
 </body>
