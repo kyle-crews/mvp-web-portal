@@ -1,14 +1,9 @@
-{% load static %}
+{% extends 'base.html' %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
 
-<!doctype html>
-<html>
-    <head>
-        <title>Hello World App</title>
-        <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    </head>
-
-    <body>
+{% block content %} 
         <h1>Hello World!</h1>
-        <p>I am a basic website.</p>    
-    </body>
-</html>
+        <p>I am a basic website.</p>
+{%  endblock content %}
